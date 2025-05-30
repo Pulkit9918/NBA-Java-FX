@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox styleClass="background"  alignment="CENTER" prefHeight="300" prefWidth="500" spacing="20" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="controller.RecordController">
+    <VBox spacing = "10" alignment = "CENTER">
+        <HBox alignment = "CENTER" spacing = "10">
+            <Label text = "All Players" styleClass = "label-header"/>
+        </HBox>
+        <TableView fx:id = "recordTable" prefWidth = "500.0" prefHeight = "200.0">
+            <columns>
+                <TableColumn fx:id = "Round" text = "Round" prefWidth = "80.0"></TableColumn>
+                <TableColumn fx:id = "Game" text = "Game" prefWidth = "130.0"></TableColumn>
+                <TableColumn fx:id = "winningTeam" text = "Winning team" prefWidth = "130.0"></TableColumn>
+                <TableColumn fx:id = "losingTeam" text = "Losing Team" prefWidth = "150.0"></TableColumn>
+            </columns>
+        </TableView>
+        <Button text = "Close" fx:id = "clBtn" onAction = "#handleCL" styleClass = "button"/>
+    </VBox>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

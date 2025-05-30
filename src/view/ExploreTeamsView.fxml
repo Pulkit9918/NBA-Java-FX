@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox  alignment="CENTER" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20"
+       xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="controller.ExploreTeamsController"
+       >
+    
+    <HBox > 
+        <ImageView fitHeight = "210.0" fitWidth = "600.0">
+            <image>
+                <Image url = "@NBA_Back.jpg"/>
+            </image>
+        </ImageView>
+    </HBox>
+    <VBox spacing = "10">
+        <HBox alignment = "CENTER_LEFT" spacing = "250">
+            <Button text = "${'Teams menu'}" fx:id = "teamMenuButton" onAction = "#handleTM" styleClass = "largeButton" alignment = "CENTER"/>
+            <Button text = "${'View Players'}" fx:id = "viewPlayersButton" onAction = "#handleVP" styleClass = "largeButton" alignment = "CENTER"/>
+        </HBox>
+        <HBox alignment = "CENTER" spacing = "40">
+            <Button text = "${'Close'}" fx:id = "closeButton" onAction = "#handleCL" styleClass = "largeButton" alignment = "CENTER"/>
+        </HBox>
+    </VBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

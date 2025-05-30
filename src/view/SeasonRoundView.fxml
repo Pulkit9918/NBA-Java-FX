@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox styleClass="background"  alignment="CENTER" prefHeight="400" prefWidth="800" spacing="20" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.TeamsRoundController">
+    <VBox alignment = "CENTER" spacing = "10">
+        <Label fx:id = "roundCount" text = "Round:" styleClass = "label-header"/>
+        <HBox alignment = "CENTER_LEFT" spacing = "50">
+            <ListView fx:id = "allTeamsList" prefWidth = "220.0" prefHeight = "400.0">
+                <placeholder >
+                    <Label text = "All teams added in round." styleClass = "h3"/>
+                </placeholder>
+            </ListView>
+            <Button text = ">>>" fx:id = "addBtn" onAction = "#handleADD" styleClass = "button"/>
+            <TableView fx:id = "teamsAddedRoundTable" prefWidth = "300.0" prefHeight = "400.0">
+                <columns>
+                    <TableColumn fx:id = "Game" text = "Game" prefWidth = "80.0"></TableColumn>
+                    <TableColumn fx:id = "teamOne" text = "Team-1" prefWidth = "130.0"></TableColumn>
+                    <TableColumn fx:id = "teamTwo" text = "Team-2" prefWidth = "130.0"></TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+        <Button text = "Arrange Season" fx:id = "ASBtn" onAction = "#handleAS" styleClass = "button"/>
+    </VBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="700.0" spacing="20" styleClass="background" 
+       alignment="CENTER" fx:controller="controller.ViewPlayersController">
+    <VBox spacing = "10">
+        <HBox alignment = "CENTER">
+            <Label text = "All Players" styleClass = "h1"/>
+        </HBox>
+        <HBox alignment = "CENTER">
+            <TableView fx:id = "playersTable" prefWidth = "800.0" prefHeight = "400.0">
+                <placeholder>
+                    <Label text = "Players list is not loaded" styleClass = "h2"/>
+                </placeholder>
+                <columns>
+                    <TableColumn fx:id = "team" text = "Team" prefWidth = "100.0"></TableColumn>
+                    <TableColumn fx:id = "playerName" text = "Player Name" prefWidth = "130.0"></TableColumn>
+                    <TableColumn fx:id = "playerCredit" text = "Player Credit" prefWidth = "130.0"></TableColumn>
+                    <TableColumn fx:id = "playerAge" text = "Player Age" prefWidth = "100.0"></TableColumn>
+                    <TableColumn fx:id = "playerNo" text = "Player Number" prefWidth = "130.0"></TableColumn>
+                    <TableColumn fx:id = "playerLevel" text = "Player Level" prefWidth = "130.0"></TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+        <VBox alignment = "CENTER" spacing = "10">
+            <Label text = "Filter" styleClass = "label-header"/>
+            <HBox spacing = "30" alignment = "CENTER">
+                <Label text = "Filter By Level:" styleClass = "h1"/>
+                <TextField fx:id = "levelFilterTF" prefWidth = "100"/>
+                <Label text = "Filter By Name:" styleClass = "h1"/>
+                <TextField fx:id = "nameFilterTF" prefWidth = "100"/>
+            </HBox>
+            <Label text = "Filter By Age:" styleClass = "h1"/>
+            <HBox spacing = "30" alignment = "CENTER">
+                <Label text = "From" styleClass = "h1"/>
+                <TextField fx:id = "startAgeTF" prefWidth = "100"/>
+                <Label text = "To:" styleClass = "h1"/>
+                <TextField fx:id = "endAgeTF" prefWidth = "100"/>                  
+            </HBox>
+            <Button text = "Close" fx:id = "clBtn" onAction = "#handleCL" styleClass = "button"/>
+        </VBox>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>
